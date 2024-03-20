@@ -41,7 +41,7 @@ void StochasticOptimizer::optimise(std::vector<double>& start_point,
             previous_point = current_point;
             current_point = model;
             PreviousFunctionValue = CurrentFunctionValue;
-            for(int i=0; i<delta.size(); ++i)
+            for(size_t i=0; i<delta.size(); ++i)
               delta[i] *= alpha;
         }
 
