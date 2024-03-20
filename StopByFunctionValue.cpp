@@ -2,5 +2,5 @@
 
 bool StopByFunctionValue::ShouldStop()
 {
-    return abs(CurrentIterationCount - PreviousFunctionValue) < Epsilon;
+    return std::abs(CurrentIterationCount - PreviousFunctionValue) < Epsilon;
 }
