@@ -2,5 +2,5 @@
 
 bool StopThroughIter::ShouldStop()
 {
-	return CurrentIterationCount < MaxIterationCount;
+	return CurrentIterationCount == MaxIterationCount;
 }

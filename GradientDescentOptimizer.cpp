@@ -40,7 +40,8 @@ void GradientDescentOptimizer::optimise
         StopCriteria->SetPreviousPoint(PreviousPoint);
         StopCriteria->SetGradient(Gradient);
 
-     } while (!(StopCriteria->ShouldStop()) && CurrentIteration < StopCriteria->GetMaxIterations());
+     } while (!(StopCriteria->ShouldStop()) && CurrentIteration < StopCriteria->GetMaxIterations()
+         && CurrentFunctionValue > 1e-16);
 }
 
 double GradientDescentOptimizer::FindOptimalStep

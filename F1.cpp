@@ -6,21 +6,21 @@ int F1::GetFuncDim() const
 }
 
 std::string F1::GetFunc() const
-{
-	return "(x+2y-7)^2+(2x+y-5)^2";
+{ 
+	return "(1-x)^2 + 100(y-x^2)^2";
 }
 
 double F1::GetFuncValue(std::vector<double> x)
 {
-    return (x[0] + 2 * x[1] - 7) * (x[0] + 2 * x[1] - 7) + (2 * x[0] + x[1] - 5) * (2 * x[0] + x[1] - 5);
+    return (1 - x[0]) * (1 - x[0]) + 100 * (x[1] - x[0]*x[0]) * (x[1] - x[0] * x[0]);
 }
 
 std::vector<double> F1::GetFuncGrad(std::vector<double> x) const
 {
     std::vector<double> gradient;
 
-    gradient.push_back(2 * (x[0] + 2 * x[1] - 7) + 4 * (2 * x[0] + x[1] - 5));
-    gradient.push_back(4 * (x[0] + 2 * x[1] - 7) + 2 * (2 * x[0] + x[1] - 5));
+    gradient.push_back(-2 * (1 - x[0]) - 400 * x[0] * (x[1] - x[0] * x[0]));
+    gradient.push_back(200 * (x[1] - x[0] * x[0]));
 
     return gradient;
 }

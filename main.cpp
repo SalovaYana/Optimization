@@ -51,7 +51,7 @@ int main()
         while (RightChoice) 
         {
             std::cout << "Select function." << std::endl <<
-                "Press 1 - for the 2D function (x+2y-7)^2+(2x+y-5)^2." << std::endl <<
+                "Press 1 - for the 2D function (1-x)^2 + 100(y-x^2)^2." << std::endl <<
                 "Press 2 - for the 3D function x^2 + y^2 + z^2 + 2x + 4y - 6z." << std::endl <<
                 "Press 3 - for the 4D function (x-3)^2+(y+2)^2+(z-1)^2+(p-4)^2+5." << std::endl;
             std::cin >> FunctionToChoose;

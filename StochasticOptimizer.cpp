@@ -52,7 +52,7 @@ void StochasticOptimizer::optimise(std::vector<double>& start_point,
         stop_criteria->SetPreviousFunctionValue(PreviousFunctionValue);
         stop_criteria->SetPreviousPoint(previous_point);
     }     
-    while (stop_criteria->ShouldStop());
+    while (!(stop_criteria->ShouldStop()));
 
     stop_criteria->SetCurrentPoint(current_point);
 }
